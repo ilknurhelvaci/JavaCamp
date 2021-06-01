@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+        ===================
+        JAX-WS WSIMPORT SECTION
+        ===================
+    -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-KPSPublic" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/KPSPublic"/>
+        <property name="wsdl-KPSPublic" location="xml-resources/web-service-references/KPSPublic/wsdl/tckimlik.nvi.gov.tr/Service/KPSPublic.asmx.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/KPSPublic" destdir="${build.generated.dir}/jax-wsCache/KPSPublic" wsdl="${wsdl-KPSPublic}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="https://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx?WSDL" xnocompile="true" xendorsed="true" package="MernisService">
+            <depends file="${wsdl-KPSPublic}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/KPSPublic"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/KPSPublic">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-KPSPublic" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/KPSPublic"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/MernisService"/>
+    </target>
+    <target name="wsimport-client-KPSPublic_1" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/KPSPublic_1"/>
+        <property name="wsdl-KPSPublic_1" location="xml-resources/web-service-references/KPSPublic_1/wsdl/tckimlik.nvi.gov.tr/Service/KPSPublic.asmx.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/KPSPublic_1" destdir="${build.generated.dir}/jax-wsCache/KPSPublic_1" wsdl="${wsdl-KPSPublic_1}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="https://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-KPSPublic_1}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/KPSPublic_1"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/KPSPublic_1">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-KPSPublic_1" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/KPSPublic_1"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/tr/gov/nvi/tckimlik/ws"/>
+    </target>
+    <target name="wsimport-client-KPSPublic_2" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/KPSPublic_2"/>
+        <property name="wsdl-KPSPublic_2" location="xml-resources/web-service-references/KPSPublic_2/wsdl/tckimlik.nvi.gov.tr/Service/KPSPublic.asmx.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/KPSPublic_2" destdir="${build.generated.dir}/jax-wsCache/KPSPublic_2" wsdl="${wsdl-KPSPublic_2}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="https://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx?WSDL" xnocompile="true" xendorsed="true" package="MernisService">
+            <depends file="${wsdl-KPSPublic_2}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/KPSPublic_2"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/KPSPublic_2">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-KPSPublic_2" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/KPSPublic_2"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/MernisService"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-KPSPublic, wsimport-client-KPSPublic_1, wsimport-client-KPSPublic_2"/>
+</project>
